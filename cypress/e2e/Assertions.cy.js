@@ -31,5 +31,11 @@ describe("Assertions Demo", () => {
 
         //check length
         cy.xpath('//a').should('have.length', 5)
+
+        // Login test cases assertions
+        cy.get("input[name='username']").type('Admin')
+        cy.get("input[name='username']").should('have.value', 'Admin')
+        cy.get("input[name='password']").type('admin123')
+        cy.get("input[name='password']").should('have.value', 'admin123')
     })
 })
