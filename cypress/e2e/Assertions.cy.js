@@ -38,4 +38,12 @@ describe("Assertions Demo", () => {
         cy.get("input[name='password']").type('admin123')
         cy.get("input[name='password']").should('have.value', 'admin123')
     })
+
+    it("Explicit Assertion", () => {
+        cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+        // Login test cases assertions
+        cy.get("input[name='username']").type('Admin')
+        cy.get("input[name='password']").type('admin123')
+        cy.get("button[type='submit']").click()
+    })
 })
