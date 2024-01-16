@@ -21,10 +21,22 @@ describe("Handle Dropdown", () => {
             .should('have.text', 'Italy')
     })
 
-    it("Auto Suggest Dropdown", () => {
+    it.skip("Auto Suggest Dropdown", () => {
         cy.visit("https://www.wikipedia.org/");
         cy.get("#searchInput").type('Bangladesh')
         cy.get(".suggestion-title").contains("Bangladesh Army").click()
         cy.get('.mw-page-title-main').should('have.text', 'Bangladesh Army')
+    })
+
+    it("Dynamic Auto Suggest DropDown", () => {
+        cy.visit("https://www.google.com/");
+        cy.get("textarea[name='q']").type('us')
+        cy.get("div.wM6W7d>span").should("have.length", 13)
+        cy.get("div.wM6W7d>span").each(($el, index, $list) => {
+            if ($el.text() === 'USA') {
+                cy.wrap($el).click();
+            }
+        })
+        cy.get("textarea[name='q']").should("have.text", "usa")
     })
 })
