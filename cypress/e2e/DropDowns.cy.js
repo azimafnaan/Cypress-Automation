@@ -31,6 +31,7 @@ describe("Handle Dropdown", () => {
     it("Dynamic Auto Suggest DropDown", () => {
         cy.visit("https://www.google.com/");
         cy.get("textarea[name='q']").type('us')
+
         cy.get("div.wM6W7d>span").should("have.length", 13)
         cy.get("div.wM6W7d>span").each(($el, index, $list) => {
             if ($el.text() === 'USA') {
