@@ -34,3 +34,4 @@ Interacting with Elements
 
             -JavaScript Alert
             -JavaScript Confirm Alert
+            -JavaScript Prompt Alert
