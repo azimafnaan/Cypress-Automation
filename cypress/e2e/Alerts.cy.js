@@ -35,7 +35,7 @@ describe('Alerts', () => {
         cy.get("#result").should('have.text', 'You clicked: Cancel')
     })
     //3) Javascript Prompt Alert: It will have some text with a text box for user input along with 'OK' and 'Cancel' button
-    it.only('Js Prompt Alert', () => {
+    it.skip('Js Prompt Alert', () => {
         cy.visit("https://the-internet.herokuapp.com/javascript_alerts")
         cy.window().then((win) => {
             cy.stub(win, 'prompt').returns("Hello, world!");
@@ -45,5 +45,26 @@ describe('Alerts', () => {
         //cy.on('window:prompt', () => false)
         cy.get("#result").should('have.text', 'You entered: Hello, world!')
     })
-    //4) Authenticated Alert 
+
+    //4) Authenticated Alert
+
+    it.only("Authenticated Alert", () => {
+        //Approach-1
+        /*  
+        cy.visit("https://the-internet.herokuapp.com/basic_auth", {
+              auth: {
+                  username: "admin",
+                  password: "admin"
+              }
+          })
+          //assertion
+          cy.get("div[class='example']>p").should('have.contain', 'Congratulations! You must have the proper credentials.')
+  
+          */
+        //Approach-2
+        cy.visit("https://admin:admin@the-internet.herokuapp.com/basic_auth")
+        //assertion
+        cy.get("div[class='example']>p").should('have.contain', 'Congratulations! You must have the proper credentials.')
+    })
+
 })

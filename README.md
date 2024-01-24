@@ -30,8 +30,9 @@ Interacting with Elements
             -Auto suggest DropDown
             -Dynamic Drop Down
 
-    Handle different types of alerts in Cypres
+    Handle different types of alerts in Cypress
 
             -JavaScript Alert
             -JavaScript Confirm Alert
             -JavaScript Prompt Alert
+            -JavaScript Basic Auth Alert
