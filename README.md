@@ -4,23 +4,23 @@ Cypress Test Automation
 
 # Practices Selectors & Assertions
 
-CSS Locators & Xpath
+- CSS Locators & Xpath
 
-- Assertions
-- should
-- and
-  - eq
-  - contain
-  - include
-  - exist
-  - have.length
-  - have.value
-  - exit
-  - be.visible
-  - have.text
-  - not.be.visible
-  - not.exist
-  - etc..
+  - Assertions
+  - should
+  - and
+    - eq
+    - contain
+    - include
+    - exist
+    - have.length
+    - have.value
+    - exit
+    - be.visible
+    - have.text
+    - not.be.visible
+    - not.exist
+    - etc..
 
 # Interacting with Elements
 
