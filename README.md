@@ -23,6 +23,7 @@ Cypress Test Automation
 
 # Interacting with Elements
 
+- Handle Child Tabs in Cypress
 - Handling Various Types of Dropdowns
 
   - Drop Down with Select tag
