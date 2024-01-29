@@ -19,7 +19,7 @@ describe("Handle Tables", () => {
     it.skip('Check cell data from specific row and column', () => {
         cy.get('table[class="table table-bordered table-hover"]>tbody>tr:nth-child(4)>td:nth-chi(3)').contains("gorankrezic90@gmail.com")
     })
-    it.only('Read all the rows & columns data in the first page', () => {
+    it.skip('Read all the rows & columns data in the first page', () => {
         cy.get('table[class="table table-bordered table-hover"]>tbody>tr')
             .each(($row, index, $rows) => {
                 cy.wrap($row).within(() => {
@@ -29,7 +29,13 @@ describe("Handle Tables", () => {
                 })
             })
     })
-    it.skip('Pagination', () => {
-
+    it.only('Pagination', () => {
+        //find total number of pages
+        let totalPages;
+        cy.get(".col-sm-6.text-end").then((e) => {
+            let myText = e.text();
+            totalPages = myText.substring(myText.indexOf("(") + 1, myText.indexOf("Pages") - 1);
+            cy.log("Total Number pages in a table=======>" + totalPages);
+        })
     })
 })
