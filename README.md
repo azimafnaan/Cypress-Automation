@@ -37,3 +37,11 @@ Cypress Test Automation
   - JavaScript Confirm Alert
   - JavaScript Prompt Alert
   - JavaScript Basic Auth Alert
+
+- Handle Dynamic Table
+
+  - Check Numbers of Row & Column
+  - Check Cell Data From Specific Row and Column
+  - Read All The Rows & Columns Data in The First Page
+  - Find Total Number of Pages
+  - Handle Dynamic Table with Pagination
