@@ -12,17 +12,17 @@ describe("Handle Tables", () => {
 
     })
 
-    it.only('Check Numbers of Row & Column', () => {
+    it.skip('Check Numbers of Row & Column', () => {
         cy.get('table[class="table table-bordered table-hover"]>tbody>tr').should('have.length', '10');
         cy.get('table[class="table table-bordered table-hover"]>thead>tr>td').should('have.length', '7');
     })
-    it('Check cell data from specific row and column', () => {
-
+    it.only('Check cell data from specific row and column', () => {
+        cy.get('table[class="table table-bordered table-hover"]>tbody>tr:nth-child(4)>td:nth-chi(3)').contains("gorankrezic90@gmail.com")
     })
     it('Read all the rows & columns data in the first page', () => {
 
     })
-    it('Pagination', () => {
+    it.skip('Pagination', () => {
 
     })
 })
