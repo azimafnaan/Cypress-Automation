@@ -3,7 +3,7 @@ describe("Handle Tables", () => {
         cy.visit("https://demo.opencart.com/admin/index.php")
         cy.get("#input-username").type("demo")
         cy.get("#input-password").type("demo")
-        cy.get("button[type='submit']").click
+        cy.get("button[type='submit']").click()
         cy.get(".btn-close").click();
 
         // Customers-->Customer
@@ -12,8 +12,9 @@ describe("Handle Tables", () => {
 
     })
 
-    it('Check Numbers Row & Column', () => {
-
+    it.only('Check Numbers of Row & Column', () => {
+        cy.get('table[class="table table-bordered table-hover"]>tbody>tr').should('have.length', '10');
+        cy.get('table[class="table table-bordered table-hover"]>thead>tr>td').should('have.length', '7');
     })
     it('Check cell data from specific row and column', () => {
 
