@@ -28,7 +28,13 @@ describe("Mouse Operation", () => {
         cy.visit("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick")
         cy.frameLoaded("#iframeResult");
         // Approach-1
-        cy.iframe("#iframeResult").find("button[ondblclick='myFunction()']").trigger("dblclick")
+        /* 
+         cy.iframe("#iframeResult").find("button[ondblclick='myFunction()']").trigger("dblclick")
+         cy.wait(3000);
+         cy.iframe("#iframeResult").find("#demo").contains("Hello World")
+         */
+        // Approach-2
+        cy.iframe("#iframeResult").find("button[ondblclick='myFunction()']").dblclick()
         cy.wait(3000);
         cy.iframe("#iframeResult").find("#demo").contains("Hello World")
 
