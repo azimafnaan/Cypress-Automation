@@ -42,7 +42,7 @@ describe("Mouse Operation", () => {
 
     })
 
-    it.only("Drag and Drop using Plugin", () => {
+    it.skip("Drag and Drop using Plugin", () => {
         cy.visit("http://www.dhtmlgoodies.com/packages/dhtml-suite-for-applications/demos/demo-drag-drop-3.html");
         cy.wait(3000)
         cy.get("#box3").drag("#box103", { force: true })
@@ -50,6 +50,10 @@ describe("Mouse Operation", () => {
     })
 
     it("Scrolling Page", () => {
+        cy.visit("https://www.countries-ofthe-world.com/flags-of-the-world.html")
+        cy.get(':nth-child(1) > tbody > :nth-child(16) > :nth-child(1) > img').scrollIntoView({ duration: 2000 })
+        cy.get(':nth-child(1) > tbody > :nth-child(16) > :nth-child(1) > img').should("be.visible");
+        cy.get('#footer').scrollIntoView({ duration: 2000 })
 
     })
 })

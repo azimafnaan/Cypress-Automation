@@ -52,3 +52,4 @@ Cypress Test Automation
   - Right Click
   - Double Click
   - Drag and Drop
+  - Scrolling Page
