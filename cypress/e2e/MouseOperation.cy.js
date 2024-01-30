@@ -26,7 +26,7 @@ describe("Mouse Operation", () => {
 
     })
 
-    it.only("Double Click", () => {
+    it.skip("Double Click", () => {
         cy.visit("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick")
         cy.frameLoaded("#iframeResult");
         // Approach-1
@@ -42,7 +42,10 @@ describe("Mouse Operation", () => {
 
     })
 
-    it("Drag and Drop using Plugin", () => {
+    it.only("Drag and Drop using Plugin", () => {
+        cy.visit("http://www.dhtmlgoodies.com/packages/dhtml-suite-for-applications/demos/demo-drag-drop-3.html");
+        cy.wait(3000)
+        cy.get("#box3").drag("#box103", { force: true })
 
     })
 

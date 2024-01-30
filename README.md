@@ -45,3 +45,10 @@ Cypress Test Automation
   - Read All The Rows & Columns Data in The First Page
   - Find Total Number of Pages
   - Handle Dynamic Table with Pagination
+
+- Handling Mouse Events
+
+  - Mouse Hover
+  - Right Click
+  - Double Click
+  - Drag and Drop
