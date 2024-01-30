@@ -9,6 +9,17 @@ describe("Mouse Operation", () => {
     })
 
     it.only("Right Click", () => {
+        cy.visit("https://swisnl.github.io/jQuery-contextMenu/demo.html")
+        cy.wait(300)
+        // Approach -1
+        /*
+        cy.get(".context-menu-one.btn.btn-neutral").trigger("contextmenu");
+         cy.get('.context-menu-icon-copy').should("be.visible");
+         cy.get('.context-menu-icon-copy').click();
+        */
+        //Approach-2
+        cy.get(".context-menu-one.btn.btn-neutral").rightclick();
+        cy.get('.context-menu-icon-copy').should("be.visible");
 
     })
 
