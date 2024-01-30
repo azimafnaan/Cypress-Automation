@@ -1,4 +1,6 @@
-import "cypress-iframe"
+import "cypress-iframe";
+require('@4tw/cypress-drag-drop')
+
 describe("Mouse Operation", () => {
 
     it.skip("Mouse Hover", () => {
