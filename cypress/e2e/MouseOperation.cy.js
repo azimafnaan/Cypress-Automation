@@ -29,7 +29,7 @@ describe("Mouse Operation", () => {
         cy.frameLoaded("#iframeResult");
         // Approach-1
         cy.iframe("#iframeResult").find("button[ondblclick='myFunction()']").trigger("dblclick")
-        cy.wait(5000);
+        cy.wait(3000);
         cy.iframe("#iframeResult").find("#demo").contains("Hello World")
 
     })
