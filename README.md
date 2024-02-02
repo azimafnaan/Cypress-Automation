@@ -53,3 +53,10 @@ Cypress Test Automation
   - Double Click
   - Drag and Drop
   - Scrolling Page
+
+- Handling File Upload
+
+  - Single File Upload
+  - Multiple Files Upload
+  - Renaming file while uploading
+  - File Upload Drag & Drop

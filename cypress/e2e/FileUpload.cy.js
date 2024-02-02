@@ -21,18 +21,18 @@ describe("File Uploads", () => {
         cy.get("#uploaded-files").contains("myfile.pdf");
     })
 
-    it.only("File Upload - Drag and Drop", () => {
+    it("File Upload - Drag and Drop", () => {
         cy.visit("https://the-internet.herokuapp.com/upload")
         cy.get("#drag-drop-upload").attachFile('test1.pdf', { subjectType: 'drag-n-drop' });
         cy.wait(5000);
         cy.get('#drag-drop-upload > .dz-preview > .dz-details > .dz-filename > span').contains("test1.pdf");
     })
 
-    it("Multiple File Upload", () => {
-
+    it.only("Multiple File Upload", () => {
+        cy.visit("https://davidwalsh.name/demo/multiple-file-upload.php");
+        cy.get("#filesToUpload").attachFile(["test1.pdf", "test2.pdf"]);
+        cy.wait(5000)
+        cy.get(':nth-child(6) > strong').should("contain.text", "Files You Selected:")
     })
 
-    it("File Upload - Shadow Dom", () => {
-
-    })
 })
