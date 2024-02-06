@@ -64,6 +64,12 @@ Cypress Test Automation
 # Hooks & Tags
 
 - Cypress Hooks
+
+  - before
+  - after
+  - beforeEach
+  - AfterEach
+
 - Cypress Tags
 
 # Fixtures & Data Driven Testing (Using JSON Data)
