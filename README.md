@@ -60,3 +60,8 @@ Cypress Test Automation
   - Multiple Files Upload
   - Renaming file while uploading
   - File Upload Drag & Drop
+
+# Hooks & Tags
+
+- Cypress Hooks
+- Cypress Tags
