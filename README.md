@@ -65,3 +65,8 @@ Cypress Test Automation
 
 - Cypress Hooks
 - Cypress Tags
+
+# Fixtures & Data Driven Testing (Using JSON Data)
+
+- Fixtures in Cypress
+- Data Driven Testing using Fixture Files
