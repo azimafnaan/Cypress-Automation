@@ -81,3 +81,7 @@ Cypress Test Automation
 
 - Navigate between Browsers
 - Simulating back , forward & reload buttons in browser
+
+# Capture Screenshots
+
+- Capture screenshot and save screenshot
