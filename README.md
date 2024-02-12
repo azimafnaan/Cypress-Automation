@@ -85,3 +85,9 @@ Cypress Test Automation
 # Capture Screenshots
 
 - Capture screenshot and save screenshot
+
+# Generate HTML Reports
+
+- Generate HTML reports
+- Headed & Headless mode execution
+- Executing tests on specific browser Electron/Chrome/Firefox etc..
