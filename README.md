@@ -76,3 +76,8 @@ Cypress Test Automation
 
 - Fixtures in Cypress
 - Data Driven Testing using Fixture Files
+
+# Browser Navigation
+
+- Navigate between Browsers
+- Simulating back , forward & reload buttons in browser
